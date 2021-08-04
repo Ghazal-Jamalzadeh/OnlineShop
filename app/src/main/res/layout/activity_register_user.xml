@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.Register_user"
+    android:layoutDirection="rtl"
+    android:background="@color/background_color"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_primary"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#fff"
+                android:text="ثبت نام فروشگاه"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        >
+    <LinearLayout
+        android:id="@+id/liner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_centerVertical="true">
+        <EditText
+            android:id="@+id/Et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام و نام خانوادگی">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/Et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="شماره موبایل را وارد کنید...">
+
+        </EditText>
+        <EditText
+            android:id="@+id/Et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ایمیل خود را وارد کنید...">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/Et_pass"
+            android:hint="رمز عبور را وارد کنید..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/Btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ثبت نام">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Btn_login"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner1"
+        android:text="قبلا ثبت نام کرده اید!">
+
+    </Button>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

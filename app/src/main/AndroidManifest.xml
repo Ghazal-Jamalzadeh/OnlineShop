@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jmzd.ghazal.onlineshop">
-<uses-permission android:name="android.permission.INTERNET"/>
-<!--            android:usesCleartextTraffic="true"           اگر این تکه کد اضافه نشود ریسایکلر ویو کار نمی کند.-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,14 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineShop"
-        android:usesCleartextTraffic="true"
-        >
-        <activity android:name=".MainActivity">
+        android:usesCleartextTraffic="true">
+        <activity android:name=".auth.Panel_user"></activity>
+        <activity android:name=".auth.Register_user" />
+        <activity android:name=".auth.Login_user" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
