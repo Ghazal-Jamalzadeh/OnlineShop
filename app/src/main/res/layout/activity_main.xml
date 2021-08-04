@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:layoutDirection="rtl">
     <androidx.appcompat.widget.Toolbar
@@ -38,13 +39,14 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-<!--    <com.pnikosis.materialishprogress.ProgressWheel-->
-<!--        android:id="@+id/progress_wheel"-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="80dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        wheel:matProg_barColor="#5588FF"-->
-<!--        wheel:matProg_progressIndeterminate="true" />-->
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/color_primary"
+        wheel:matProg_progressIndeterminate="true" />
+    wheel -> create name space declaration ...
 
 </RelativeLayout>

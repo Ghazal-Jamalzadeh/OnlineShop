@@ -48,5 +48,5 @@ dependencies {
     //new
     implementation 'com.pnikosis:materialish-progress:1.7'
     implementation 'com.android.volley:volley:1.1.1'
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 }
