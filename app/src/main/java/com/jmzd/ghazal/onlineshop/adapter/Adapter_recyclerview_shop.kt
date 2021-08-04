@@ -30,8 +30,8 @@ class Adapter_recyclerview_shop(val context: Context, val list:List<Datamodel_sh
         val data:Datamodel_shop=list.get(position)
         Glide.with(context).load(data.imageurl).into(holder.Im_post)
         holder.Tv_title.text=data.title
-        holder.Tv_date.text="تاریخ پست : "+data.date
-        holder.Tv_view.text="تعداد بازدید : "+data.view
+        holder.Tv_date.text="تاریخ پست: "+data.date
+        holder.Tv_view.text="تعداد بازدید: "+data.view
         holder.Tv_price.text=data.price
 
         holder.itemView.setOnClickListener {
