@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_margin="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:id="@+id/Im_post"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/Tv_title"
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@+id/Im_post"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:padding="5dp">
+<!--            android:fontFamily="@font/iran"-->
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Tv_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Tv_title"
+            android:layout_marginTop="10dp"
+            android:textColor="#E74C3C"
+            android:text="قیمت محصول : "
+            android:layout_toEndOf="@+id/Im_post"
+            android:padding="5dp">
+<!--            android:fontFamily="@font/iran"-->
+
+
+        </TextView>
+        <TextView
+            android:id="@+id/Tv_price"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/Tv_price_text"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#2ECC71"
+            android:text="20000"
+            android:layout_below="@+id/Tv_title"
+            android:padding="5dp">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/Tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+
+            android:padding="5dp">
+<!--            android:fontFamily="@font/iran"-->
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/Tv_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp">
+<!--            android:fontFamily="@font/iran"-->
+
+
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
