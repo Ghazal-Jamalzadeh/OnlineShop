@@ -13,13 +13,14 @@
         android:theme="@style/Theme.OnlineShop"
         android:usesCleartextTraffic="true">
         <activity android:name=".auth.Panel_user"></activity>
-        <activity android:name=".auth.Register_user" />
-        <activity android:name=".auth.Login_user" >
+        <activity android:name=".auth.Register_user" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".auth.Login_user" >
         </activity>
         <activity android:name=".MainActivity">
 

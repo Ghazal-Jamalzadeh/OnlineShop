@@ -1,6 +1,7 @@
 package com.jmzd.ghazal.onlineshop.auth
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -53,10 +54,11 @@ class Login_user : AppCompatActivity(), Config {
                     val Strcheck=jsonObject.getString("status")
                     if(Strcheck.equals("ok")){
 
-//                        val sharedPreferences=getSharedPreferences("user",0)
-//                        val edit: SharedPreferences.Editor=sharedPreferences.edit()
-//                        edit.putString("id",jsonObject.getString("user_id"))
-//                        edit.apply()
+                        val sharedPreferences=getSharedPreferences("user",0)
+                        val edit: SharedPreferences.Editor=sharedPreferences.edit()
+                        edit.putString("id",jsonObject.getString("user_id"))
+                        edit.apply()
+
                         val intent=Intent(applicationContext,Panel_user::class.java)
                         startActivity(intent)
                         finish()

@@ -80,22 +80,24 @@
             android:id="@+id/Btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="ثبت نام">
 
         </Button>
 
+        <Button
+            android:id="@+id/Btn_login"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liner1"
+            android:textColor="@color/white"
+            android:text="قبلا ثبت نام کرده اید!">
 
+        </Button>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/Btn_login"
-        android:layout_margin="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/liner1"
-        android:text="قبلا ثبت نام کرده اید!">
 
-    </Button>
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
