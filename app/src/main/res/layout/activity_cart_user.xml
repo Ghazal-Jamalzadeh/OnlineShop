@@ -1,9 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
     tools:context=".cart.Cart_user">
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/color_primary"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"
+            android:text="سب خرید شما"/>
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>
+
+
+<RelativeLayout
+android:id="@+id/liner"
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:layout_below="@+id/toolbar"
+android:background="#27AE60">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:textColor="#fff"
+    android:padding="10dp"
+    android:text="مبلغ قابل پرداخت : "/>
+
+<TextView
+    android:id="@+id/Tv_price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:textColor="#fff"
+    android:layout_marginLeft="10dp"
+    android:layout_alignParentLeft="true"
+    android:padding="10dp"
+    />
+
+
+</RelativeLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recyclerview"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_below="@+id/liner">
+
+</androidx.recyclerview.widget.RecyclerView>
+
+<com.pnikosis.materialishprogress.ProgressWheel
+android:id="@+id/progress_wheel"
+android:layout_width="80dp"
+android:layout_height="80dp"
+android:layout_centerHorizontal="true"
+android:layout_centerVertical="true"
+wheel:matProg_barColor="#5588FF"
+wheel:matProg_progressIndeterminate="true" />
+
+
+<TextView
+android:id="@+id/Tv_error"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textColor="#F30505"
+android:textSize="16dp"
+android:padding="10dp"
+android:textAlignment="center"
+android:layout_centerVertical="true">
+
+</TextView>
+
+
+<Button
+android:id="@+id/Btn_addcart"
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:text="نهایی کردن خرید"
+android:textColor="#fff"
+android:layout_alignParentBottom="true"
+android:background="#27AE60">
+
+</Button>
+
+    </RelativeLayout>

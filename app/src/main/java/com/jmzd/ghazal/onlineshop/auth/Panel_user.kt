@@ -12,6 +12,7 @@ import com.jmzd.ghazal.onlineshop.MainActivity
 import com.jmzd.ghazal.onlineshop.R
 import com.jmzd.ghazal.onlineshop.Userid
 import com.jmzd.ghazal.onlineshop.api.Config
+import com.jmzd.ghazal.onlineshop.cart.Cart_user
 import com.jmzd.ghazal.onlineshop.databinding.ActivityLoginUserBinding
 import com.jmzd.ghazal.onlineshop.databinding.ActivityPanelUserBinding
 import org.json.JSONObject
@@ -27,7 +28,7 @@ class Panel_user : AppCompatActivity() , Config {
         setContentView(binding.root)
 
         binding.BtnHistory.setOnClickListener(){
-            val intent= Intent(applicationContext,MainActivity::class.java)
+            val intent= Intent(applicationContext,Cart_user::class.java)
             startActivity(intent)
         }
         Getapi()
