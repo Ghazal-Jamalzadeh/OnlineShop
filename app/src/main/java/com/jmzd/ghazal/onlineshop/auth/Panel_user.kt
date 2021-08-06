@@ -1,5 +1,6 @@
 package com.jmzd.ghazal.onlineshop.auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -7,6 +8,7 @@ import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.jmzd.ghazal.onlineshop.MainActivity
 import com.jmzd.ghazal.onlineshop.R
 import com.jmzd.ghazal.onlineshop.Userid
 import com.jmzd.ghazal.onlineshop.api.Config
@@ -25,8 +27,8 @@ class Panel_user : AppCompatActivity() , Config {
         setContentView(binding.root)
 
         binding.BtnHistory.setOnClickListener(){
-            Toast.makeText(applicationContext,"پیاده سازی تاریخچه خرید کاربر", Toast.LENGTH_LONG).show()
-
+            val intent= Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent)
         }
         Getapi()
     }
