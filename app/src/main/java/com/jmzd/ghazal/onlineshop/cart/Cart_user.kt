@@ -4,27 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.RelativeLayout
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import com.jmzd.ghazal.onlineshop.R
 import com.jmzd.ghazal.onlineshop.Userid
-import com.jmzd.ghazal.onlineshop.adapter.Adapter_recyclerview_shop
+import com.jmzd.ghazal.onlineshop.adapter.Adapter_cartuser
+import com.jmzd.ghazal.onlineshop.address.Address_activity
 import com.jmzd.ghazal.onlineshop.api.Api_cart
-import com.jmzd.ghazal.onlineshop.api.Api_shop
 import com.jmzd.ghazal.onlineshop.api.Config
 import com.jmzd.ghazal.onlineshop.dataModel.Datamodel_cart
-import com.jmzd.ghazal.onlineshop.dataModel.Datamodel_shop
 import com.jmzd.ghazal.onlineshop.databinding.ActivityCartUserBinding
-import com.jmzd.ghazal.onlineshop.databinding.ActivityLoginUserBinding
-import com.jmzd.ghazal.onlineshop.databinding.ActivityMainBinding
-import com.pnikosis.materialishprogress.ProgressWheel
 import org.json.JSONObject
 
 class Cart_user : AppCompatActivity() , Config {
@@ -47,7 +39,8 @@ class Cart_user : AppCompatActivity() , Config {
         api.Get_list(object : Api_cart.Getlist{
             override fun list(list: ArrayList<Datamodel_cart>) {
                 binding.recyclerview.layoutManager= LinearLayoutManager(applicationContext)
-                val adapter = Adapter_cartuser(applicationContext,user.Getuser(),list,object :Adapter_cartuser.Get_change{
+                val adapter = Adapter_cartuser(applicationContext,user.Getuser(),list,object :
+                    Adapter_cartuser.Get_change{
                     override fun getchange() {
                         Get_price()
                     }
@@ -97,8 +90,8 @@ class Cart_user : AppCompatActivity() , Config {
     fun Cast(){
 
         binding.BtnAddcart.setOnClickListener {
-//            val intent= Intent(applicationContext, Address_activity::class.java)
-//            startActivity(intent)
+            val intent= Intent(applicationContext, Address_activity::class.java)
+            startActivity(intent)
         }
     }
 }

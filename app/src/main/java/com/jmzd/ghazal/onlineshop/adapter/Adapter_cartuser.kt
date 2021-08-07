@@ -1,31 +1,23 @@
-package com.jmzd.ghazal.onlineshop.cart
+package com.jmzd.ghazal.onlineshop.adapter
 
 import android.content.Context
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.bumptech.glide.Glide
-import com.jmzd.ghazal.onlineshop.MainActivity
 import com.jmzd.ghazal.onlineshop.R
 import com.jmzd.ghazal.onlineshop.api.Config
-import com.jmzd.ghazal.onlineshop.auth.Login_user
 import com.jmzd.ghazal.onlineshop.dataModel.Datamodel_cart
-import com.jmzd.ghazal.onlineshop.dataModel.Datamodel_shop
-import com.jmzd.ghazal.onlineshop.more.More_activity
 
 
-
-class Adapter_cartuser(val context: Context, val userid:String, val list:ArrayList<Datamodel_cart>, val getchange:Get_change )
+class Adapter_cartuser(val context: Context, val userid:String, val list:ArrayList<Datamodel_cart>, val getchange: Get_change)
     :RecyclerView.Adapter<Adapter_cartuser.viewhoder>(),
     Config {
 
