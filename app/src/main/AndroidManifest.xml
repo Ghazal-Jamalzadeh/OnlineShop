@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineShop"
         android:usesCleartextTraffic="true">
-        <activity android:name=".address.Address_activity"></activity>
+        <activity android:name=".cart.Activity_order"></activity>
+        <activity android:name=".address.Address_add" />
+        <activity android:name=".address.Address_activity" />
         <activity android:name=".cart.Cart_user" />
         <activity android:name=".more.More_activity" />
         <activity android:name=".auth.Panel_user" />

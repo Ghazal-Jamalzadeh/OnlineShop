@@ -1,5 +1,6 @@
 package com.jmzd.ghazal.onlineshop.address
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import com.jmzd.ghazal.onlineshop.R
 import com.jmzd.ghazal.onlineshop.adapter.Adapter_address
 import com.jmzd.ghazal.onlineshop.adapter.Adapter_recyclerview_shop
 import com.jmzd.ghazal.onlineshop.api.Api_address
+import com.jmzd.ghazal.onlineshop.auth.Login_user
 import com.jmzd.ghazal.onlineshop.dataModel.Datamodel_address
 import com.jmzd.ghazal.onlineshop.databinding.ActivityAddressBinding
 
@@ -19,6 +21,11 @@ class Address_activity : AppCompatActivity() {
         setContentView(R.layout.activity_address)
         binding= ActivityAddressBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.ImAddress.setOnClickListener(){
+            val intent= Intent(applicationContext, Address_add::class.java)
+            startActivity(intent)
+        }
 
         Setup()
     }

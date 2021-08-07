@@ -1,12 +1,14 @@
 package com.jmzd.ghazal.onlineshop.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jmzd.ghazal.onlineshop.R
+import com.jmzd.ghazal.onlineshop.cart.Activity_order
 import com.jmzd.ghazal.onlineshop.dataModel.Datamodel_address
 
 class Adapter_address (val context: Context, val list:ArrayList<Datamodel_address> )
@@ -28,9 +30,11 @@ class Adapter_address (val context: Context, val list:ArrayList<Datamodel_addres
         holder.Tv_phone.text="شماره موبایل : "+data.phone
         holder.Tv_tell.text="شماره تلفن : "+data.tell
         holder.itemView.setOnClickListener {
-//            val intent=Intent(context, Activity_order::class.java)
-//            intent.putExtra("idaddress",data.id)
-//            context.startActivity(intent)
+
+            val intent= Intent(context, Activity_order::class.java)
+            intent.putExtra("idaddress",data.id)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            context.startActivity(intent)
         }
     }
     class viewhoder(itemview: View):RecyclerView.ViewHolder(itemview){

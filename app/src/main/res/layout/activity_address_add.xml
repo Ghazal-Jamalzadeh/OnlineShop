@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".address.Address_add"
+    android:background="@color/background_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_primary"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#fff"
+                android:text="ثبت نام فروشگاه"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+  <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+      android:layout_below="@+id/toolbar"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            >
+    <LinearLayout
+        android:id="@+id/liner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp">
+        <EditText
+            android:id="@+id/Et_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام شهر را وارد کنید">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/Et_meli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="شماره ملی را وارد کنید...">
+
+        </EditText>
+        <EditText
+            android:id="@+id/Et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="کد پستی را وارد کنید...">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/Et_address"
+            android:hint="ادرس خود را وارد کنید..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/Et_phone"
+            android:hint="شماره موبایل را وارد کنید..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/Et_tell"
+            android:hint="شماره تلفن را وارد کنید..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/Btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="ثبت ادرس">
+
+        </Button>
+
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
