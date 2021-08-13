@@ -45,19 +45,21 @@ class Activity_order : AppCompatActivity(), Config {
         Get_pay()
         price_code()
         binding.BtnAddcart.setOnClickListener {
-            if(code==null){
-                Toast.makeText(applicationContext,"خطا در دریافت کد پرداخت...",Toast.LENGTH_LONG).show()
-            }else
-            {
-                if(link_pay.isNullOrEmpty()){
-                    Toast.makeText(applicationContext,"خطا در ارسال به سمت درگاه پرداخت",Toast.LENGTH_LONG).show()
-                }
-                else
-                {
-                    val intentaction= Intent(Intent.ACTION_VIEW, Uri.parse(link_pay+code))
+//            if(code==null){
+//                Toast.makeText(applicationContext,"خطا در دریافت کد پرداخت...",Toast.LENGTH_LONG).show()
+//            }else
+//            {
+//                if(link_pay.isNullOrEmpty()){
+//                    Toast.makeText(applicationContext,"خطا در ارسال به سمت درگاه پرداخت",Toast.LENGTH_LONG).show()
+//                }
+//                else
+//                {
+//                    val intentaction= Intent(Intent.ACTION_VIEW, Uri.parse(link_pay+code))
+//                    startActivity(intentaction)
+//                }
+//            }
+            val intentaction= Intent(Intent.ACTION_VIEW, Uri.parse(link_pay))
                     startActivity(intentaction)
-                }
-            }
         }
     }
 
